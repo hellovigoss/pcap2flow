@@ -11,6 +11,10 @@
 #define FLOW_TABLE_SIZE 65536
 #define FLOW_TIMER 3600000
 
+#ifndef ETHERTYPE_LOOPBACK
+#define ETHERTYPE_LOOPBACK 0x9000
+#endif
+
 static flowtable flowcache;
 static flowtable ftable[FLOW_TABLE_SIZE];
 static nf_peer_t nf_peer;
